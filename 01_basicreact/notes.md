@@ -1,7 +1,7 @@
 # Learning react
 
 - react is a library.
-- framework is stricter and library ismore casual.
+- framework is stricter and library is more casual.
 - react ka origin facebook ke ek bug se hua: phantom message error.
 - react is used to simplify building the complex frontends.
 - react ko use krke hum single page web applications bna sakte hai sirf.
