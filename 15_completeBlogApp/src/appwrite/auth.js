@@ -1,5 +1,5 @@
 //hum ek folder hi use krr lenge appwrite ka, and usme saare services jo appwrite ke use krenge wo sab rhega.
-import conf from '../conf.js'
+import conf from '../conf/conf.js'
 
 import {Client, Account, ID} from "appwrite"
 

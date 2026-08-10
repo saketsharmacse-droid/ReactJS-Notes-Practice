@@ -329,3 +329,25 @@ const service = new Service()
 // export default Service
 export default service;
 ```
+- services are classes that have methods, waha se kuch method export krte hai, ab wo method ke andar kya hora usse fark ni padta, just the data kya ass krna hai wo matters, baaki method andar se appwrite use krr rha hoga ya firebase.
+
+- ab hum state management krte hai, store set krenge redux setup krke, reducers set krenge.
+
+- aise krke store bna liye:
+```js
+store.js
+//store bnane ke liye humein configureStore chahiye.
+//store humesha redux se aata hai and isko chahiye ki hum saari reducers ki information passon krein isko.
+import {configureStore} from '@reduxjs/toolkit'
+
+const store = configureStore({
+    reducer: {
+
+    }
+});
+
+export default store;
+
+```
+
+
