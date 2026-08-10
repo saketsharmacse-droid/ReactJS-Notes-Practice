@@ -56,3 +56,42 @@ export default App
 ``` js
   console.log(import.meta.env.VITE_APPWRITE_URL);
 ```    
+
+- Now, hum .env mei baaki variables add krr dete hai, keep it empty abhi ke liye, we can name them in lower case as well, but convention hai upper case mei krna.
+```js
+VITE_APPWRITE_URL="test environment"
+VITE_APPWRITE_PROJECT_ID=""
+VITE_APPWRITE_DATABASE_ID=""
+VITE_APPWRITE_COLLECTION_ID=""
+VITE_APPWRITE_BUCKET_ID=""
+```
+
+## Building the project
+
+- sabse phle appwrite baas mei jaake start a new project/ create project/ settings/ waha jaake API endpoint ko copy krna hai and paste it in .env VITE_APPWRITE_URL
+- project id copy krke paste krrdo.
+- appwrite mei jaake auth, tables creation, bucket(storage) sab kuch bna lo.
+-ek config krke folder mei file bnayenge conf.js krke, this is a productionlevel practice followed everywhere.
+
+```js
+//ek config krke folder mei file bnayenge conf.js krke.
+//this is a productionlevel practice followed everywhere.
+const conf = { 
+    appwriteUrl: String(import.meta.env.VITE_APPWRITE_URL),
+    appwriteProjectId: String(import.meta.env.VITE_PROJECT_ID),
+    appwriteDatabaseId: String(import.meta.env.VITE_DATABASE_ID),
+    appwriteCollectionId: String(import.meta.env.VITE_COLLECTION_ID),
+    appwriteBucketId: String(import.meta.env.VITE_BUCKET_ID),
+    //fayda yeh hoga ki isme string milne ki surity rhegi, aur thoda sa systematic milega.
+
+
+
+}
+
+export default conf
+
+//kya hota hai ki har baar:  console.log(import.meta.env.VITE_APPWRITE_URL); aise krke use krne is not good practice.
+//kabhi load nhi hua yaa error aa gya toh bahut difficult hota hai.
+//toh hum saare variables ko ek jagah laake export krr denge.
+//actually .env file ke andar values must be in string, but kabhi kabhi humein agar "" ke andar nhi likhe hai toh wo uso numbers treat krega and problems aayengi.
+```
