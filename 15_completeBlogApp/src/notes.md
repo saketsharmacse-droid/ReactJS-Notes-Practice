@@ -355,3 +355,6 @@ export default store;
 - hum yaha pe component based architecture pe focus krr rhe isliye complexity badh rha.
 - normal login form yaa todo mei kya hiota tha ki inputs ka state ko dispatch krr dete thhe on button click, then uske baad state process krr lete thhe.
 - but yaha pe hum uss input field ko bhi ek separate component jaise treat krenge, just for the sake of component based architecture.
+
+-regex likhne ke liye, for email validation and all:
+- [regex]("https://regexr.com")
